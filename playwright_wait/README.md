@@ -1,3 +1,3 @@
-## LambdaTest Playwright tesing with Python
+## LambdaTest Playwright Testing with Python
 
 
