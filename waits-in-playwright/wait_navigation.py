@@ -4,6 +4,9 @@ import urllib
 import subprocess
 import re
 import asyncio
+from dotenv import load_dotenv
+
+load_dotenv('.env', override=True)
 
 from playwright.sync_api import sync_playwright, expect, Playwright
 
@@ -12,7 +15,7 @@ capabilities = {
     "browserVersion": "latest",
     "LT:Options": {
         "platform": "Windows 10",
-        "build": "LT Playwright Python Build",
+        "build": "Waits in Playwright Python Build",
         "name": "Playwright Wait Navigation Python",
         "user": os.getenv("LT_USERNAME"),
         "accessKey": os.getenv("LT_ACCESS_KEY"),
@@ -35,7 +38,7 @@ def wait_state_navigation(playwright):
         "wss://cdp.lambdatest.com/playwright?capabilities="
         + urllib.parse.quote(json.dumps(capabilities))
     )
-    browser = playwright.chromium.connect(lt_cdp_url, timeout=120000)
+    browser = playwright.chromium.connect(lt_cdp_url, timeout=30000)
     page = browser.new_page()
 
     try:
@@ -67,7 +70,7 @@ def wait_url_navigation(playwright):
         "wss://cdp.lambdatest.com/playwright?capabilities="
         + urllib.parse.quote(json.dumps(capabilities))
     )
-    browser = playwright.chromium.connect(lt_cdp_url, timeout=120000)
+    browser = playwright.chromium.connect(lt_cdp_url, timeout=30000)
     page = browser.new_page()
 
     try:
@@ -104,7 +107,7 @@ def wait_event_navigation(playwright):
         "wss://cdp.lambdatest.com/playwright?capabilities="
         + urllib.parse.quote(json.dumps(capabilities))
     )
-    browser = playwright.chromium.connect(lt_cdp_url, timeout=120000)
+    browser = playwright.chromium.connect(lt_cdp_url, timeout=30000)
     page = browser.new_page()
 
     try:
@@ -138,7 +141,7 @@ def wait_function_navigation(playwright):
         "wss://cdp.lambdatest.com/playwright?capabilities="
         + urllib.parse.quote(json.dumps(capabilities))
     )
-    browser = playwright.chromium.connect(lt_cdp_url, timeout=120000)
+    browser = playwright.chromium.connect(lt_cdp_url, timeout=30000)
     page = browser.new_page()
 
     try:
