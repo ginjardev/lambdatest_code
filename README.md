@@ -47,10 +47,6 @@ Run the command - `python3 wait_navigation.py`
 
 You should see results of your test performed as seen in the screenshot below:
 
-```markup
-<img src="./chrome-python-build.png" alt="Result" />
-```
-
  ![result](chrome-python-build.png)
 
 
