@@ -3,10 +3,9 @@ import os
 import urllib
 import subprocess
 import re
-import asyncio
 from dotenv import load_dotenv
 
-load_dotenv('.env', override=True)
+load_dotenv(".env", override=True)
 
 from playwright.sync_api import sync_playwright, expect, Playwright
 
@@ -150,9 +149,7 @@ def wait_function_navigation(playwright):
         page.evaluate("() => document.title")
 
         # waits for function to return truthy value
-        page.wait_for_function(
-        "title = 'Jolio Balia'; () => document.title === title"
-        )
+        page.wait_for_function("title = 'Jolio Balia'; () => document.title === title")
         expect(page).to_have_title("Jolio Balia")
         title = page.title()
 
