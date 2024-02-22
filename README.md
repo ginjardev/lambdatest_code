@@ -2,7 +2,7 @@
 
 This repo contains code to show how waits in Playwright can be implemented on a chrome browser on LambdaTest cloud platform.
 
-This project uses Pytest as testing framework to run the tests. 
+This project uses Pytest as testing framework to run the tests.
 
 ### Setup
 
@@ -14,18 +14,18 @@ This project uses Pytest as testing framework to run the tests.
    ```bash
    python3 -m venv env
    ```
-3. Activate virtual environment 
+3. Activate virtual environment
 
    ```bash
    source env/bin/activate
    ```
 4. Install the following dependencies:
-   * Install node package managet 
+   * Install node package managet
 
      ```javascript
      npm install
      ```
-   * Install PlayWright 
+   * Install PlayWright
 
      ```bash
      pip3 install playwright==1.39.0
@@ -37,7 +37,7 @@ This project uses Pytest as testing framework to run the tests.
      ```
 5. In order to run your Playwright tests, you will need to set your LambdaTest username and access key in the environment variables. Click the **Access Key** button at the top-right of the Automation Dashboard to access it.
 
-    ![dashboard](https://i.postimg.cc/SNR4sTpf/chrome-python-build.png)
+   \
 6. Set your **Username** and **Access Key** as follows:
    * **Linux:**
 
@@ -70,6 +70,6 @@ Run the command: `pytest` on your terminal
 
 You should see results of your test performed as seen in the screenshot below:
 
- ![Access Key](https://i.postimg.cc/tgn63NQK/access-key.png)
+
 
 
