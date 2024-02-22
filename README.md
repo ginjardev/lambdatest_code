@@ -38,7 +38,7 @@ This project uses Pytest as testing framework to run the tests.
      ```
 5. In order to run your Playwright tests, you will need to set your LambdaTest username and access key in the environment variables. Click the **Access Key** button at the top-right of the Automation Dashboard to access it.
 
-   \
+    ![AccessKey & Username](https://i.postimg.cc/tgn63NQK/access-key.png)
 6. Set your **Username** and **Access Key** as follows:
    * **Linux:**
 
