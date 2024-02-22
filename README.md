@@ -1,23 +1,44 @@
 ## Waits in Playwright Testing with Python
 
-This repo contains code to show how waits in Playwright can be implemented on LambdaTest cloud
+This repo contains code to show how waits in Playwright can be implemented on a chrome browser on LambdaTest cloud platform.
 
-on a chrome browser.
+This project uses Pytest as testing framework to run the tests. 
 
 ### Setup
 
 
-
-
 1. Fork this repo
    * `cd waits-in-playwright`
-2. Install the following dependencies:
-   * Install node package managet `npm install`
-   * Install PlayWright `pip3 install playwright==1.39.0`
-3. In order to run your Playwright tests, you will need to set your LambdaTest username and access key in the environment variables. Click the **Access Key** button at the top-right of the Automation Dashboard to access it.
+2. Create a virtual environment with the following command on the terminal
 
-    ![details](./lambdatest-dashboard.png)
-4. Set your **Username** and **Access Key** as follows:
+   ```bash
+   python3 -m venv env
+   ```
+3. Activate virtual environment 
+
+   ```bash
+   source env/bin/activate
+   ```
+4. Install the following dependencies:
+   * Install node package managet 
+
+     ```javascript
+     npm install
+     ```
+   * Install PlayWright 
+
+     ```bash
+     pip3 install playwright==1.39.0
+     ```
+   * Install other requirements for the project
+
+     ```bash
+     pip install -r requirements.txt
+     ```
+5. In order to run your Playwright tests, you will need to set your LambdaTest username and access key in the environment variables. Click the **Access Key** button at the top-right of the Automation Dashboard to access it.
+
+    ![dashboard](https://i.postimg.cc/SNR4sTpf/chrome-python-build.png)
+6. Set your **Username** and **Access Key** as follows:
    * **Linux:**
 
      ```bash
@@ -35,7 +56,9 @@ on a chrome browser.
 
 To run the *waits in Playwright* on Chrome on LambdaTest cloud platform:
 
-Run the command - `python3 wait_navigation.py`
+Navigate into the tests directory: `cd tests`
+
+Run the command: `pytest` on your terminal
 
 * Go to your LambdaTest dashboard
 * Click **Automation** on the left side bar
@@ -47,6 +70,6 @@ Run the command - `python3 wait_navigation.py`
 
 You should see results of your test performed as seen in the screenshot below:
 
- ![result](chrome-python-build.png)
+ ![Access Key](https://i.postimg.cc/tgn63NQK/access-key.png)
 
 

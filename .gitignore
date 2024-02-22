@@ -1,1 +1,5 @@
 .env
+.pytest_cache
+env/
+__pycache__/
+wait_navigation.py

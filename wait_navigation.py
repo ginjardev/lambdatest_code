@@ -41,6 +41,7 @@ def wait_state_navigation(playwright):
     page = browser.new_page()
 
     try:
+        # page = browser_operation
         page.goto("https://ecommerce-playground.lambdatest.io/")
 
         # wait for load state wait until naviagtion is complete
@@ -174,7 +175,6 @@ def set_test_status(page, status, remark):
         + remark
         + '"}}',
     )
-
 
 with sync_playwright() as playwright:
     wait_state_navigation(playwright)
