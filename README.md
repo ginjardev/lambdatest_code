@@ -7,6 +7,7 @@ This project uses Pytest as testing framework to run the tests.
 ### Setup
 
 
+
 1. Fork this repo
    * `cd waits-in-playwright`
 2. Create a virtual environment with the following command on the terminal
@@ -70,6 +71,7 @@ Run the command: `pytest` on your terminal
 
 You should see results of your test performed as seen in the screenshot below:
 
+ ![Results](https://i.postimg.cc/SNR4sTpf/chrome-python-build.png)
 
 
 
