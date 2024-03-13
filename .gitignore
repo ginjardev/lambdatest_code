@@ -3,3 +3,4 @@
 env/
 __pycache__/
 wait_navigation.py
+waits_in_playwright/
