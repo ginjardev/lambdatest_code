@@ -3,12 +3,11 @@ import os
 import urllib
 import subprocess
 import pytest
+from playwright.sync_api import sync_playwright
 from dotenv import load_dotenv
 
+
 load_dotenv("../.env", override=True)
-
-from playwright.sync_api import sync_playwright, expect
-
 capabilities = {
     "browserName": "Chrome",  # Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`
     "browserVersion": "latest",
@@ -43,6 +42,7 @@ def browser():
         browser = playwright.chromium.connect(lt_cdp_url, timeout=30000)
         yield browser
         browser.close()
+
 
 # Pytest fixture for page setup
 @pytest.fixture
