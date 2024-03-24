@@ -8,3 +8,4 @@ def test_wait_function_navigation(page):
 	# waits for function to return truthy value
 	page.wait_for_function("title = 'Jolio Balia'; () => document.title === title")
 	expect(page).to_have_title("Jolio Balia")
+	
