@@ -1,10 +1,11 @@
 ## Waits in Playwright Testing with Python
 
-This repo contains code to show how waits in Playwright can be implemented on a chrome browser on LambdaTest cloud platform.
+This repo contains code to show how waits in Playwright can be implemented on a chrome browser on a cloud platform.
 
 This project uses Pytest as testing framework to run the tests.
 
 ### Setup
+
 
 
 
