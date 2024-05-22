@@ -28,7 +28,7 @@ capabilities = {
 
 
 # Pytest fixture for browser setup
-@pytest.fixture( name='browser', autouse=True, scope='module')
+@pytest.fixture(name="browser", autouse=True, scope="module")
 def browser():
     with sync_playwright() as playwright:
         playwrightVersion = (
@@ -50,3 +50,18 @@ def page(browser):
     page = browser.new_page()
     yield page
     page.close()
+
+
+@pytest.fixture
+def set_test_status(page):
+    def _set_test_status(status, remark):
+        page.evaluate(
+            "_ => {}",
+            'lambdatest_action: {"action": "setTestStatus", "arguments": {"status":"'
+            + status
+            + '", "remark": "'
+            + remark
+            + '"}}',
+        )
+
+    yield _set_test_status

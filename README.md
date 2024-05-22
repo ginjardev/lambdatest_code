@@ -22,7 +22,7 @@ This project uses Pytest as testing framework to run the tests.
    source env/bin/activate
    ```
 4. Install the following dependencies:
-   * Install node package managet
+   * Install node package manager
 
      ```javascript
      npm install
